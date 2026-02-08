@@ -2,12 +2,12 @@
 
 ## Goal
 
-This is a personal portfolio and blog for a full-stack web developer, aimed at potential employers. It showcases work, skills, and experience, with a blog to demonstrate technical knowledge. The design should feel warm and inviting while clearly highlighting technical ability.
+This is a personal portfolio and blog for a full-stack web developer, aimed at potential employers and recruiters. It showcases work, skills, and experience, with a blog to demonstrate technical knowledge. The design should feel warm and inviting while clearly highlighting technical ability.
 
-## Tone & Content
+## Tone
 
-- **Voice**: Technical but approachable — assumes reader knowledge but explains clearly, not overly formal.
-- **Blog content**: Primarily short TIL (Today I Learned) posts and quick tips about web development.
+Technical but approachable — warm, not overly formal.
+Copy should be clear to non-technical readers (recruiters, hiring managers) while still demonstrating technical depth.
 
 ## Rules
 
@@ -15,6 +15,7 @@ This is a personal portfolio and blog for a full-stack web developer, aimed at p
 - **No inline styles** — don't add inline `style` attributes in block markup or patterns. Use theme.json or style.css.
 - **No new CSS custom properties** — check existing ones in style.css before creating new ones.
 - **Keep functions.php minimal** — don't add logic there that could live elsewhere (e.g., in a pattern or template).
+- **Accessibility** — target WCAG 2.1 AA. All text must meet 4.5:1 contrast ratio (3:1 for large text). Links must be distinguishable by more than color alone. All interactive elements must have visible focus states and be keyboard-navigable.
 
 ## Overview
 
@@ -51,23 +52,26 @@ All patterns are registered under the `donnapeplinskie` category. Each is a full
 
 ### Fonts
 
-- **Roboto** (300/400/500/700) — body text, loaded from Google Fonts CDN via theme.json `fontFace`
-- **Lora** (400/500/600) — headings, loaded locally from `assets/fonts/` via theme.json `fontFace`
-- **Material-Design-Icons** — icon font loaded via `@font-face` in style.css, used for download button icon
+- **Roboto** — body text (via theme.json, CDN-hosted)
+- **Lora** — headings (via theme.json, loaded locally from `assets/fonts/`)
+- **Material-Design-Icons** — icon font loaded separately via `@font-face` in style.css
 
 ## Design System
 
 ### Color palette (defined in theme.json)
 
-| Name | Slug | Hex | Usage |
-|------|------|-----|-------|
-| White | `white` | `#FFFFFF` | Page background, card backgrounds |
-| Cream | `cream` | `#FFFBF7` | Hero section background |
-| Light Gray | `light-gray` | `#F8F6F4` | Experience/blog section backgrounds |
-| Dark Gray | `dark-gray` | `#2D2A26` | Skills section background, heading text |
-| Gray | `gray` | `#727272` | Body text, metadata |
-| Cyan | `cyan` | `#8BB7AD` | Primary accent, about/contact backgrounds, buttons |
-| Orange | `orange` | `#FE6E41` | Links, hover states |
+| Color | Usage |
+|-------|-------|
+| White | Page background, card backgrounds |
+| Cream | Hero section background |
+| Light Gray | Experience/blog section backgrounds |
+| Mid Gray | Blog card placeholder gradient |
+| Gray | Body text, metadata |
+| Dark Gray | Skills section background, heading text |
+| Cyan Light | Hero divider |
+| Cyan | Primary accent, about/contact backgrounds, buttons |
+| Cyan Dark | Contact section gradient, social link hover |
+| Orange | Links, hover states |
 
 ### CSS conventions
 
