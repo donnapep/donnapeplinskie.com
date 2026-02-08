@@ -1,0 +1,903 @@
+/*
+Theme Name: Donna Peplinskie
+Author: Donna Peplinskie
+Author URI: https://donnapeplinskie.com
+Description: Personal blog theme inspired by Material Design
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: donnapeplinskie
+*/
+
+/* Material Design Icons font */
+@font-face {
+	font-family: Material-Design-Icons;
+	src: url('assets/fonts/Material-Design-Icons.eot');
+	src: url('assets/fonts/Material-Design-Icons.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/Material-Design-Icons.woff') format('woff'),
+		 url('assets/fonts/Material-Design-Icons.ttf') format('truetype'),
+		 url('assets/fonts/Material-Design-Icons.svg#Material-Design-Icons') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Base styles */
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Material Design shadows */
+.post-card {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.25s ease;
+}
+
+.post-card:hover {
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Navigation styles */
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding: 20px;
+}
+
+.wp-block-navigation .wp-block-navigation-item a {
+	transition: color 0.2s ease;
+}
+
+/* Button styles */
+.wp-block-button__link {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.25s ease, background-color 0.25s ease;
+	padding: 12px 24px;
+	letter-spacing: 0.5px;
+}
+
+.wp-block-button__link:hover {
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Featured image styles */
+.wp-block-post-featured-image img {
+	border-radius: 2px;
+}
+
+/* Social links */
+.wp-block-social-links .wp-social-link {
+	transition: transform 0.2s ease;
+}
+
+.wp-block-social-links .wp-social-link:hover {
+	transform: scale(1.1);
+}
+
+/* Raised social links */
+.social-links-raised.wp-block-social-links .wp-social-link {
+	background: #ffffff !important;
+	border: 1px solid #e0e0e0 !important;
+	border-radius: 50% !important;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	width: 45px !important;
+	height: 45px !important;
+	padding: 0 !important;
+	margin: 0 4px !important;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.social-links-raised.wp-block-social-links .wp-social-link a,
+.social-links-raised.wp-block-social-links .wp-social-link button {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	width: 45px !important;
+	height: 45px !important;
+	padding: 0 !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.social-links-raised.wp-block-social-links .wp-social-link svg {
+	fill: var(--wp--preset--color--cyan) !important;
+	color: var(--wp--preset--color--cyan) !important;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.social-links-raised .wp-social-link:hover {
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Query pagination */
+.wp-block-query-pagination {
+	gap: 10px;
+}
+
+.wp-block-query-pagination-numbers .page-numbers {
+	padding: 8px 12px;
+	background: var(--wp--preset--color--white);
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current {
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white);
+}
+
+/* Post navigation */
+.wp-block-post-navigation-link a {
+	padding: 10px 16px;
+	background: var(--wp--preset--color--white);
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.2s ease;
+}
+
+.wp-block-post-navigation-link a:hover {
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Comments */
+.wp-block-comment-template {
+	padding-left: 0;
+}
+
+.wp-block-comment-content {
+	margin-top: 10px;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+	border: none;
+	border-bottom: 1px solid var(--wp--preset--color--gray);
+	background: transparent;
+	padding: 10px 0;
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+	outline: none;
+	border-bottom-color: var(--wp--preset--color--cyan);
+}
+
+input[type="submit"] {
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white);
+	border: none;
+	padding: 12px 24px;
+	border-radius: 2px;
+	font-family: inherit;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+input[type="submit"]:hover {
+	background: var(--wp--preset--color--orange);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Download button with icon */
+.has-download-icon .wp-block-button__link::before {
+	content: "\E6FF";
+	font-family: Material-Design-Icons;
+	font-size: 20px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* Read more link */
+.wp-block-post-excerpt__more-link {
+	display: inline-block;
+	padding: 8px 16px;
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white) !important;
+	border-radius: 2px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	margin-top: 15px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+	transition: all 0.25s ease;
+}
+
+.wp-block-post-excerpt__more-link:hover {
+	background: var(--wp--preset--color--orange);
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Header sticky */
+.wp-block-template-part[data-area="header"] > .wp-block-group {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+/* Hero section */
+.wp-block-cover {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-block-cover h1 strong {
+	font-weight: 700;
+}
+
+/* Profile image with white border on cyan background */
+.profile-image {
+	position: relative;
+}
+
+.profile-image img {
+	border: 6px solid var(--wp--preset--color--white);
+	box-shadow: var(--shadow-lg);
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Portfolio items */
+.portfolio-item {
+	overflow: hidden;
+	position: relative;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+	transform: scale(1.05);
+}
+
+/* Testimonial quote */
+.wp-block-quote.is-style-plain {
+	border: none;
+	padding: 0;
+	text-align: center;
+}
+
+.wp-block-quote.is-style-plain p {
+	margin-bottom: 20px;
+}
+
+.wp-block-quote.is-style-plain cite {
+	font-style: normal;
+	font-size: 14px;
+}
+
+/* Personal info in about section */
+.personal-info p {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 10px 0;
+	margin: 0;
+}
+
+.personal-info p:last-child {
+	border-bottom: none;
+}
+
+/* About section headings with white accent on cyan */
+.about-section h2 {
+	font-style: normal;
+	padding-left: 15px;
+	border-left: 4px solid var(--wp--preset--color--white);
+	display: inline-block;
+}
+
+/* Section headings with cyan accent */
+.wp-block-group.alignfull > .wp-block-heading {
+	letter-spacing: 2px;
+}
+
+/* Centered section headings with cyan underline accent */
+.skills-section > .wp-block-heading,
+.experience-section > .wp-block-heading,
+.projects-section > .wp-block-heading,
+.blog-section > .wp-block-heading {
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.skills-section > .wp-block-heading::after,
+.experience-section > .wp-block-heading::after,
+.projects-section > .wp-block-heading::after,
+.blog-section > .wp-block-heading::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 4px;
+	background: var(--wp--preset--color--cyan);
+}
+
+/* ============================================
+   Warm Shadow System
+   ============================================ */
+:root {
+	--shadow-color: 30 20% 20%;
+	--shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.06),
+	             0 1px 3px hsl(var(--shadow-color) / 0.1);
+	--shadow-md: 0 4px 6px hsl(var(--shadow-color) / 0.07),
+	             0 2px 4px hsl(var(--shadow-color) / 0.06);
+	--shadow-lg: 0 10px 15px hsl(var(--shadow-color) / 0.1),
+	             0 4px 6px hsl(var(--shadow-color) / 0.05);
+	--shadow-xl: 0 20px 25px hsl(var(--shadow-color) / 0.1),
+	             0 8px 10px hsl(var(--shadow-color) / 0.04);
+}
+
+/* Update card shadows to use warm system */
+.post-card {
+	box-shadow: var(--shadow-md);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post-card:hover {
+	box-shadow: var(--shadow-lg);
+	transform: translateY(-4px);
+}
+
+/* Update button shadows */
+.wp-block-button__link {
+	box-shadow: var(--shadow-sm);
+	transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-button__link:hover {
+	box-shadow: var(--shadow-md);
+	transform: translateY(-2px);
+}
+
+/* Button shine effect */
+.wp-block-button__link::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.2),
+		transparent
+	);
+	transition: left 0.5s ease;
+}
+
+.wp-block-button__link:hover::before {
+	left: 100%;
+}
+
+/* ============================================
+   Scroll Animations
+   ============================================ */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-on-scroll {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.4s; }
+
+.stagger-children.is-visible > * {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.animate-on-scroll,
+	.stagger-children > * {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.post-card,
+	.wp-block-button__link {
+		transition: none;
+	}
+
+	.post-card:hover {
+		transform: none;
+	}
+
+	.wp-block-button__link::before {
+		display: none;
+	}
+}
+
+/* Make animated content visible in Site Editor */
+.editor-styles-wrapper .animate-on-scroll,
+.editor-styles-wrapper .stagger-children > * {
+	opacity: 1;
+	transform: none;
+}
+
+/* ============================================
+   Link Underline Animation
+   ============================================ */
+.wp-block-group p a:not(.wp-block-button__link) {
+	position: relative;
+	text-decoration: none;
+}
+
+.wp-block-group p a:not(.wp-block-button__link)::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: currentColor;
+	transition: width 0.3s ease;
+}
+
+.wp-block-group p a:not(.wp-block-button__link):hover::after {
+	width: 100%;
+}
+
+/* ============================================
+   Hero Section Enhancements
+   ============================================ */
+.hero-section .hero-content {
+	animation: fadeIn 0.8s ease-out;
+}
+
+.hero-section .hero-greeting {
+	animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.hero-section .hero-name {
+	animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.hero-section .hero-divider {
+	max-width: 80px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	height: 4px !important;
+	border: none !important;
+	background: var(--wp--preset--color--cyan) !important;
+	animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.hero-section .hero-tagline {
+	animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.hero-section .wp-block-buttons {
+	animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+/* Outline button style for hero */
+.hero-section .is-style-outline .wp-block-button__link {
+	background: transparent;
+	border: 2px solid var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--cyan);
+}
+
+.hero-section .is-style-outline .wp-block-button__link:hover {
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white);
+}
+
+/* ============================================
+   About Section Enhancements
+   ============================================ */
+.about-section .profile-image {
+	display: inline-block;
+}
+
+.about-section .profile-image img {
+	transition: transform 0.3s ease;
+}
+
+.about-section .profile-image:hover img {
+	transform: scale(1.02);
+}
+
+/* Links in about section on cyan background */
+.about-section a:not(.wp-block-button__link) {
+	color: var(--wp--preset--color--white) !important;
+	text-decoration: underline;
+}
+
+.about-section a:not(.wp-block-button__link):hover {
+	opacity: 0.8;
+}
+
+/* Social icons in about section - white with subtle background */
+.about-section .wp-block-social-links .wp-social-link {
+	background: rgba(255, 255, 255, 0.15) !important;
+	border-radius: 50%;
+	padding: 8px;
+	transition: background 0.2s ease;
+}
+
+.about-section .wp-block-social-links .wp-social-link:hover {
+	background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ============================================
+   Skills Section Enhancements
+   ============================================ */
+/* Vertical dividers between columns */
+.skills-section .skills-columns {
+	position: relative;
+}
+
+.skills-section .skills-columns > .wp-block-column:not(:last-child) {
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	padding-right: 30px;
+}
+
+/* Underline accent cyan on dark-gray background */
+.skills-section > .wp-block-heading::after {
+	background: var(--wp--preset--color--cyan);
+}
+
+/* ============================================
+   Experience Section Timeline
+   ============================================ */
+.timeline-item {
+	padding: 30px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	gap: 40px;
+}
+
+.timeline-item:last-child {
+	border-bottom: none;
+}
+
+/* Date column */
+.timeline-date {
+	flex-shrink: 0;
+	width: 180px;
+	font-size: 13px !important;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+/* Content column */
+.timeline-content {
+	flex: 1;
+}
+
+.timeline-content h3 {
+	font-style: normal;
+}
+
+/* Tags */
+.timeline-tags {
+	gap: 10px;
+}
+
+.timeline-tag {
+	display: inline-block;
+	padding: 8px 18px;
+	border: 1px solid var(--wp--preset--color--cyan);
+	border-radius: 25px;
+	font-size: 14px !important;
+	color: var(--wp--preset--color--cyan) !important;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.timeline-tag:hover {
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.timeline-item {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.timeline-date {
+		width: auto;
+	}
+}
+
+/* ============================================
+   Projects Section Enhancements
+   ============================================ */
+/* Constrain project images to consistent aspect ratio */
+.projects-section .post-card > figure.wp-block-image {
+	overflow: hidden;
+	aspect-ratio: 16 / 10;
+	margin: 0;
+}
+
+.projects-section .post-card > figure.wp-block-image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.projects-section .post-card > figure.wp-block-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	transition: transform 0.4s ease;
+}
+
+.projects-section .post-card:hover figure img {
+	transform: scale(1.05);
+}
+
+.projects-section .post-card h3 {
+	font-style: normal;
+}
+
+/* ============================================
+   Blog Section Enhancements
+   ============================================ */
+/* Equalize blog card heights in grid */
+.blog-section .wp-block-post-template {
+	align-items: stretch;
+}
+
+.blog-section .wp-block-post-template > li {
+	display: flex;
+}
+
+.blog-section .post-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+/* Constrain featured images to consistent aspect ratio */
+.blog-section .post-card .wp-block-post-featured-image {
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 62.5%; /* 10/16 = 0.625 for 16:10 aspect ratio */
+	position: relative;
+	flex-shrink: 0;
+	margin: 0 !important;
+	border-radius: 2px 2px 0 0;
+}
+
+.blog-section .post-card .wp-block-post-featured-image a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.blog-section .post-card .wp-block-post-featured-image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	transition: transform 0.4s ease;
+	margin: 0 !important;
+}
+
+.blog-section .post-card:hover .wp-block-post-featured-image img {
+	transform: scale(1.05);
+}
+
+/* Content area fills remaining space */
+.blog-section .post-card > .wp-block-group {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ============================================
+   Contact Section Enhancements
+   ============================================ */
+.contact-section {
+	background: linear-gradient(
+		135deg,
+		var(--wp--preset--color--cyan) 0%,
+		var(--wp--preset--color--cyan-dark) 100%
+	) !important;
+}
+
+.contact-section .post-card {
+	box-shadow: var(--shadow-lg);
+}
+
+/* Contact section headings */
+.contact-section .post-card h3 {
+	font-style: normal;
+}
+
+/* Make contact social icons use consistent styling */
+.contact-section .post-card .wp-block-social-links .wp-social-link {
+	background: var(--wp--preset--color--cyan) !important;
+}
+
+.contact-section .post-card .wp-block-social-links .wp-social-link svg {
+	fill: var(--wp--preset--color--white) !important;
+}
+
+.contact-section .post-card .wp-block-social-links .wp-social-link:hover {
+	background: var(--wp--preset--color--cyan-dark) !important;
+}
+
+/* Enhanced form focus states */
+.contact-section input[type="text"]:focus,
+.contact-section input[type="email"]:focus,
+.contact-section textarea:focus {
+	border-bottom-width: 2px;
+	border-bottom-color: var(--wp--preset--color--cyan);
+}
+
+/* ============================================
+   Projects Section Refinements
+   ============================================ */
+.projects-section .post-card h3 {
+	font-style: normal;
+}
+
+/* ============================================
+   Blog Section Refinements
+   ============================================ */
+.blog-section .wp-block-post-title {
+	font-style: normal;
+}
+
+/* Placeholder for cards without featured images */
+.blog-section .post-card:not(:has(.wp-block-post-featured-image img))::before {
+	content: '';
+	display: block;
+	height: 0;
+	padding-bottom: 62.5%; /* 10/16 = 0.625 for 16:10 aspect ratio */
+	background: linear-gradient(135deg, var(--wp--preset--color--light-gray) 0%, var(--wp--preset--color--mid-gray, #E8E4E0) 100%);
+	border-radius: 2px 2px 0 0;
+	flex-shrink: 0;
+}
+
+/* Hide empty featured image block on cards without images */
+.blog-section .post-card:not(:has(.wp-block-post-featured-image img)) .wp-block-post-featured-image {
+	display: none;
+}
+
+/* Equalize Featured Work card heights */
+.projects-section .wp-block-columns {
+	align-items: stretch;
+}
+
+.projects-section .wp-block-column {
+	display: flex;
+}
+
+.projects-section .post-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.projects-section .post-card > .wp-block-group {
+	flex: 1;
+}
+
+/* ============================================
+   Global Heading Style Fix
+   ============================================ */
+h1, h2, h3, h4, h5, h6,
+.wp-block-heading {
+	font-style: normal;
+}
+
+/* ============================================
+   Global Card Text Alignment
+   ============================================ */
+/* Ensure consistent first element margin in all cards */
+.post-card > p:first-child,
+.post-card > .wp-block-group > p:first-child,
+.post-card > h3:first-child,
+.post-card > .wp-block-group > h3:first-child {
+	margin-top: 0;
+}
+
+/* Consistent paragraph spacing in cards */
+.post-card p {
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+.post-card p:last-child {
+	margin-bottom: 0;
+}
+
+/* ============================================
+   Footer Refinements
+   ============================================ */
+footer.wp-block-template-part {
+	margin-top: 0 !important;
+}
+
+footer .wp-block-social-links .wp-social-link:hover {
+	opacity: 0.8;
+	transform: translateY(-2px);
+}
+
+footer .wp-block-social-links .wp-social-link {
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}

@@ -1,0 +1,89 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"60px","bottom":"60px"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:60px;padding-bottom:60px">
+	<!-- wp:group {"className":"post-card","style":{"spacing":{"padding":{"top":"40px","right":"40px","bottom":"40px","left":"40px"}},"border":{"radius":"2px"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group post-card has-white-background-color has-background" style="border-radius:2px;padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px">
+		<!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"30px"}}}} /-->
+
+		<!-- wp:post-title {"style":{"typography":{"fontWeight":"300"}},"fontSize":"huge"} /-->
+
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"margin":{"top":"15px","bottom":"30px"}}}} -->
+		<div class="wp-block-group" style="margin-top:15px;margin-bottom:30px">
+			<!-- wp:post-date {"textColor":"gray","fontSize":"small"} /-->
+			<!-- wp:paragraph {"textColor":"gray","fontSize":"small"} -->
+			<p class="has-gray-color has-text-color has-small-font-size">·</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:post-terms {"term":"category","textColor":"cyan","fontSize":"small"} /-->
+			<!-- wp:paragraph {"textColor":"gray","fontSize":"small"} -->
+			<p class="has-gray-color has-text-color has-small-font-size">·</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:post-author {"showAvatar":false,"textColor":"gray","fontSize":"small"} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+		<!-- wp:group {"style":{"spacing":{"margin":{"top":"40px"},"padding":{"top":"20px"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group" style="margin-top:40px;padding-top:20px">
+			<!-- wp:paragraph {"textColor":"gray","fontSize":"small"} -->
+			<p class="has-gray-color has-text-color has-small-font-size">Tags:</p>
+			<!-- /wp:paragraph -->
+			<!-- wp:post-terms {"term":"post_tag","textColor":"cyan","fontSize":"small"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"40px"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="margin-top:40px">
+		<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+		<div class="wp-block-group">
+			<!-- wp:post-navigation-link {"type":"previous","label":"← Previous Post"} /-->
+			<!-- wp:post-navigation-link {"label":"Next Post →"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"post-card","style":{"spacing":{"padding":{"top":"40px","right":"40px","bottom":"40px","left":"40px"},"margin":{"top":"40px"}},"border":{"radius":"2px"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group post-card has-white-background-color has-background" style="border-radius:2px;margin-top:40px;padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px">
+		<!-- wp:comments -->
+		<div class="wp-block-comments">
+			<!-- wp:heading {"fontSize":"x-large","style":{"typography":{"fontWeight":"300"}}} -->
+			<h2 class="wp-block-heading has-x-large-font-size" style="font-weight:300">Comments</h2>
+			<!-- /wp:heading -->
+			<!-- wp:comments-title {"level":3} /-->
+			<!-- wp:comment-template -->
+				<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"20px"}}}} -->
+				<div class="wp-block-group" style="margin-bottom:20px">
+					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+					<div class="wp-block-group">
+						<!-- wp:avatar {"size":40} /-->
+						<!-- wp:group -->
+						<div class="wp-block-group">
+							<!-- wp:comment-author-name /-->
+							<!-- wp:comment-date {"fontSize":"small"} /-->
+						</div>
+						<!-- /wp:group -->
+					</div>
+					<!-- /wp:group -->
+					<!-- wp:comment-content /-->
+					<!-- wp:comment-reply-link /-->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:comment-template -->
+			<!-- wp:comments-pagination -->
+				<!-- wp:comments-pagination-previous /-->
+				<!-- wp:comments-pagination-numbers /-->
+				<!-- wp:comments-pagination-next /-->
+			<!-- /wp:comments-pagination -->
+			<!-- wp:post-comments-form /-->
+		</div>
+		<!-- /wp:comments -->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
