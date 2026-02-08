@@ -40,16 +40,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Material Design shadows */
-.post-card {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	transition: box-shadow 0.25s ease;
-}
-
-.post-card:hover {
-	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 /* Navigation styles */
 .wp-block-navigation__responsive-container.is-menu-open {
 	padding: 20px;
@@ -59,16 +49,10 @@ body {
 	transition: color 0.2s ease;
 }
 
-/* Button styles */
+/* Button base styles */
 .wp-block-button__link {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	transition: box-shadow 0.25s ease, background-color 0.25s ease;
 	padding: 12px 24px;
 	letter-spacing: 0.5px;
-}
-
-.wp-block-button__link:hover {
-	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* Featured image styles */
@@ -347,18 +331,18 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Warm Shadow System
-   ============================================ */
+	 Warm Shadow System
+	 ============================================ */
 :root {
 	--shadow-color: 30 20% 20%;
 	--shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.06),
-	             0 1px 3px hsl(var(--shadow-color) / 0.1);
+							 0 1px 3px hsl(var(--shadow-color) / 0.1);
 	--shadow-md: 0 4px 6px hsl(var(--shadow-color) / 0.07),
-	             0 2px 4px hsl(var(--shadow-color) / 0.06);
+							 0 2px 4px hsl(var(--shadow-color) / 0.06);
 	--shadow-lg: 0 10px 15px hsl(var(--shadow-color) / 0.1),
-	             0 4px 6px hsl(var(--shadow-color) / 0.05);
+							 0 4px 6px hsl(var(--shadow-color) / 0.05);
 	--shadow-xl: 0 20px 25px hsl(var(--shadow-color) / 0.1),
-	             0 8px 10px hsl(var(--shadow-color) / 0.04);
+							 0 8px 10px hsl(var(--shadow-color) / 0.04);
 }
 
 /* Update card shadows to use warm system */
@@ -407,8 +391,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Scroll Animations
-   ============================================ */
+	 Scroll Animations
+	 ============================================ */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -488,8 +472,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Link Underline Animation
-   ============================================ */
+	 Link Underline Animation
+	 ============================================ */
 .wp-block-group p a:not(.wp-block-button__link) {
 	position: relative;
 	text-decoration: none;
@@ -511,8 +495,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Hero Section Enhancements
-   ============================================ */
+	 Hero Section Enhancements
+	 ============================================ */
 .hero-section .hero-content {
 	animation: fadeIn 0.8s ease-out;
 }
@@ -556,8 +540,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   About Section Enhancements
-   ============================================ */
+	 About Section Enhancements
+	 ============================================ */
 .about-section .profile-image {
 	display: inline-block;
 }
@@ -593,8 +577,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Skills Section Enhancements
-   ============================================ */
+	 Skills Section Enhancements
+	 ============================================ */
 /* Vertical dividers between columns */
 .skills-section .skills-columns {
 	position: relative;
@@ -611,8 +595,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Experience Section Timeline
-   ============================================ */
+	 Experience Section Timeline
+	 ============================================ */
 .timeline-item {
 	padding: 30px 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -675,8 +659,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Projects Section Enhancements
-   ============================================ */
+	 Projects Section Enhancements
+	 ============================================ */
 /* Constrain project images to consistent aspect ratio */
 .projects-section .post-card > figure.wp-block-image {
 	overflow: hidden;
@@ -707,8 +691,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Blog Section Enhancements
-   ============================================ */
+	 Blog Section Enhancements
+	 ============================================ */
 /* Equalize blog card heights in grid */
 .blog-section .wp-block-post-template {
 	align-items: stretch;
@@ -768,8 +752,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Contact Section Enhancements
-   ============================================ */
+	 Contact Section Enhancements
+	 ============================================ */
 .contact-section {
 	background: linear-gradient(
 		135deg,
@@ -809,15 +793,15 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Projects Section Refinements
-   ============================================ */
+	 Projects Section Refinements
+	 ============================================ */
 .projects-section .post-card h3 {
 	font-style: normal;
 }
 
 /* ============================================
-   Blog Section Refinements
-   ============================================ */
+	 Blog Section Refinements
+	 ============================================ */
 .blog-section .wp-block-post-title {
 	font-style: normal;
 }
@@ -858,16 +842,16 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-   Global Heading Style Fix
-   ============================================ */
+	 Global Heading Style Fix
+	 ============================================ */
 h1, h2, h3, h4, h5, h6,
 .wp-block-heading {
 	font-style: normal;
 }
 
 /* ============================================
-   Global Card Text Alignment
-   ============================================ */
+	 Global Card Text Alignment
+	 ============================================ */
 /* Ensure consistent first element margin in all cards */
 .post-card > p:first-child,
 .post-card > .wp-block-group > p:first-child,
@@ -887,8 +871,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ============================================
-   Footer Refinements
-   ============================================ */
+	 Footer Refinements
+	 ============================================ */
 footer.wp-block-template-part {
 	margin-top: 0 !important;
 }

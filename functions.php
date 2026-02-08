@@ -14,7 +14,7 @@ function donnapep_theme_scripts() {
 		'donnapep-animations',
 		get_template_directory_uri() . '/assets/js/animations.js',
 		array(),
-		'1.0.0',
+		filemtime( get_stylesheet_directory() . '/assets/js/animations.js' ),
 		true
 	);
 }

@@ -18,8 +18,8 @@
 		<h1 class="wp-block-heading has-text-align-center hero-name has-dark-gray-color has-text-color" style="font-size:clamp(48px, 10vw, 96px);font-weight:400;line-height:1.1;letter-spacing:-0.03em;margin-top:20px;margin-bottom:30px">Donna Peplinskie</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:separator {"className":"is-style-wide hero-divider","style":{"spacing":{"margin":{"top":"0","bottom":"30px"}},"color":{"background":"#B8D4CD"}}} -->
-		<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-wide hero-divider" style="margin-top:0;margin-bottom:30px;background-color:#B8D4CD;color:#B8D4CD"/>
+		<!-- wp:separator {"className":"is-style-wide hero-divider","style":{"spacing":{"margin":{"top":"0","bottom":"30px"}}},"backgroundColor":"cyan-light"} -->
+		<hr class="wp-block-separator has-text-color has-cyan-light-color has-alpha-channel-opacity has-cyan-light-background-color has-background is-style-wide hero-divider" style="margin-top:0;margin-bottom:30px"/>
 		<!-- /wp:separator -->
 
 		<!-- wp:paragraph {"align":"center","className":"hero-tagline","style":{"typography":{"fontSize":"clamp(18px, 2.5vw, 24px)","lineHeight":"1.6"}},"textColor":"gray"} -->
