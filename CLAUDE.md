@@ -1,6 +1,20 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Goal
+
+This is a personal portfolio and blog for a full-stack web developer, aimed at potential employers. It showcases work, skills, and experience, with a blog to demonstrate technical knowledge. The design should feel warm and inviting while clearly highlighting technical ability.
+
+## Tone & Content
+
+- **Voice**: Technical but approachable — assumes reader knowledge but explains clearly, not overly formal.
+- **Blog content**: Primarily short TIL (Today I Learned) posts and quick tips about web development.
+
+## Rules
+
+- **No new dependencies** — don't install packages, libraries, or frameworks without asking first. This theme has no build step and should stay that way.
+- **No inline styles** — don't add inline `style` attributes in block markup or patterns. Use theme.json or style.css.
+- **No new CSS custom properties** — check existing ones in style.css before creating new ones.
+- **Keep functions.php minimal** — don't add logic there that could live elsewhere (e.g., in a pattern or template).
 
 ## Overview
 
@@ -17,19 +31,9 @@ This is a **WordPress block theme** (theme.json v2, requires WP 6.0+). All layou
 - **`functions.php`** — Minimal: enqueues `style.css` and `animations.js`, registers editor styles, and registers a custom block pattern category (`donnapeplinskie`).
 - **`assets/js/animations.js`** — IntersectionObserver-based scroll animations. Adds `is-visible` class to elements with `.animate-on-scroll` or `.stagger-children`. Respects `prefers-reduced-motion`.
 
-### Templates (`templates/`)
+### Templates & Parts
 
-All templates use header/footer template parts and are composed from block markup:
-
-- **`front-page.html`** — Single-page portfolio layout. Assembles 7 patterns in order: hero, about, skills, experience, projects, blog, contact.
-- **`index.html`** — Blog listing with query loop, post cards, and pagination.
-- **`single.html`** — Single post with metadata, post navigation, and comments.
-- **`page.html`** — Generic page template.
-
-### Template Parts (`parts/`)
-
-- **`header.html`** — Site logo + navigation, white background, sticky positioning (via CSS).
-- **`footer.html`** — Social links + credit line, dark-gray background.
+Standard block theme structure — `templates/` for full pages, `parts/` for reusable pieces (header, footer). All templates wrap content with the header and footer parts. `front-page.html` assembles 7 patterns in order: hero, about, skills, experience, projects, blog, contact.
 
 ### Patterns (`patterns/`)
 
