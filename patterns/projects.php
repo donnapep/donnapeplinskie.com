@@ -35,8 +35,8 @@ $sensei_image = esc_url( get_template_directory_uri() ) . '/assets/images/sensei
 					<h3 class="wp-block-heading has-dark-gray-color has-text-color has-large-font-size" style="font-weight:500;margin-bottom:10px">Automattic.com</h3>
 					<!-- /wp:heading -->
 
-					<!-- wp:paragraph {"textColor":"cyan","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
-					<p class="has-cyan-color has-text-color has-small-font-size" style="margin-bottom:5px">Lead Developer</p>
+					<!-- wp:paragraph {"textColor":"cyan-dark","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
+					<p class="has-cyan-dark-color has-text-color has-small-font-size" style="margin-bottom:5px">Lead Developer</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"15px"}}}} -->
@@ -67,8 +67,8 @@ $sensei_image = esc_url( get_template_directory_uri() ) . '/assets/images/sensei
 					<h3 class="wp-block-heading has-dark-gray-color has-text-color has-large-font-size" style="font-weight:500;margin-bottom:10px">Automattic.design</h3>
 					<!-- /wp:heading -->
 
-					<!-- wp:paragraph {"textColor":"cyan","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
-					<p class="has-cyan-color has-text-color has-small-font-size" style="margin-bottom:5px">Lead Developer</p>
+					<!-- wp:paragraph {"textColor":"cyan-dark","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
+					<p class="has-cyan-dark-color has-text-color has-small-font-size" style="margin-bottom:5px">Lead Developer</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"15px"}}}} -->
@@ -99,8 +99,8 @@ $sensei_image = esc_url( get_template_directory_uri() ) . '/assets/images/sensei
 					<h3 class="wp-block-heading has-dark-gray-color has-text-color has-large-font-size" style="font-weight:500;margin-bottom:10px">Sensei LMS</h3>
 					<!-- /wp:heading -->
 
-					<!-- wp:paragraph {"textColor":"cyan","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
-					<p class="has-cyan-color has-text-color has-small-font-size" style="margin-bottom:5px">Developer & Team Lead</p>
+					<!-- wp:paragraph {"textColor":"cyan-dark","fontSize":"small","style":{"spacing":{"margin":{"bottom":"5px"}}}} -->
+					<p class="has-cyan-dark-color has-text-color has-small-font-size" style="margin-bottom:5px">Developer & Team Lead</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"15px"}}}} -->

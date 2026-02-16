@@ -8,12 +8,12 @@
 ?>
 <!-- wp:group {"align":"full","anchor":"contact","className":"contact-section","style":{"spacing":{"padding":{"top":"120px","bottom":"120px"}}},"backgroundColor":"cyan","layout":{"type":"constrained"}} -->
 <div id="contact" class="wp-block-group alignfull contact-section has-cyan-background-color has-background" style="padding-top:120px;padding-bottom:120px">
-	<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"300","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"20px"}}},"textColor":"white","fontSize":"xx-large"} -->
-	<h2 class="wp-block-heading has-text-align-center has-white-color has-text-color has-xx-large-font-size" style="font-weight:300;text-transform:uppercase;margin-bottom:20px">Contact</h2>
+	<!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"300","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"20px"}}},"textColor":"dark-gray","fontSize":"xx-large"} -->
+	<h2 class="wp-block-heading has-text-align-center has-dark-gray-color has-text-color has-xx-large-font-size" style="font-weight:300;text-transform:uppercase;margin-bottom:20px">Contact</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","textColor":"white","style":{"spacing":{"margin":{"bottom":"60px"}}}} -->
-	<p class="has-text-align-center has-white-color has-text-color" style="margin-bottom:60px">Get in touch with me</p>
+	<!-- wp:paragraph {"align":"center","textColor":"dark-gray","style":{"spacing":{"margin":{"bottom":"60px"}}}} -->
+	<p class="has-text-align-center has-dark-gray-color has-text-color" style="margin-bottom:60px">Get in touch with me</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"className":"animate-on-scroll stagger-children","style":{"spacing":{"blockGap":{"left":"40px"}}}} -->
@@ -27,14 +27,22 @@
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
+				<p><strong>Name:</strong> Donna Peplinskie</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph -->
 				<p><strong>Email:</strong> donnapep@gmail.com</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph -->
-				<p><strong>Location:</strong> Mississauga, Ontario, Canada</p>
+				<p><strong>Location:</strong> Mississauga, Canada</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:social-links {"iconColor":"white","iconColorValue":"#ffffff","iconBackgroundColor":"cyan","iconBackgroundColorValue":"#8BB7AD","style":{"spacing":{"margin":{"top":"20px"}}}} -->
+				<!-- wp:paragraph -->
+				<p><strong>Interests:</strong> Reading, cross stitch, knitting</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:social-links {"iconColor":"white","iconColorValue":"#ffffff","iconBackgroundColor":"cyan-dark","iconBackgroundColorValue":"#4C7A70","style":{"spacing":{"margin":{"top":"20px"}}}} -->
 				<ul class="wp-block-social-links has-icon-color has-icon-background-color" style="margin-top:20px"><!-- wp:social-link {"url":"https://github.com/donnapep","service":"github"} /--><!-- wp:social-link {"url":"https://linkedin.com/in/donnapeplinskie","service":"linkedin"} /--><!-- wp:social-link {"url":"https://www.instagram.com/donnapep","service":"instagram"} /--><!-- wp:social-link {"url":"https://x.com/donnapep","service":"x"} /--><!-- wp:social-link {"url":"https://www.goodreads.com/donnapep","service":"goodreads"} /--></ul>
 				<!-- /wp:social-links -->
 			</div>

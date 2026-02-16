@@ -2,7 +2,7 @@
 
 ## Goal
 
-This is a personal portfolio and blog for a full-stack web developer, aimed at potential employers and recruiters. It showcases work, skills, and experience, with a blog to demonstrate technical knowledge. The design should feel warm and inviting while clearly highlighting technical ability.
+This is a personal portfolio and blog located at https://donnapeplinskie.com/ for a full-stack web developer, aimed at potential employers and recruiters. It showcases work, skills, and experience, with a blog to demonstrate technical knowledge. The design should feel warm and inviting while clearly highlighting technical ability.
 
 ## Tone
 
@@ -15,7 +15,7 @@ Copy should be clear to non-technical readers (recruiters, hiring managers) whil
 - **No inline styles** — don't add inline `style` attributes in block markup or patterns. Use theme.json or style.css.
 - **No new CSS custom properties** — check existing ones in style.css before creating new ones.
 - **Keep functions.php minimal** — don't add logic there that could live elsewhere (e.g., in a pattern or template).
-- **Accessibility** — target WCAG 2.1 AA. All text must meet 4.5:1 contrast ratio (3:1 for large text). Links must be distinguishable by more than color alone. All interactive elements must have visible focus states and be keyboard-navigable.
+- **Accessibility** — target WCAG 2.1 AA compliance. When in doubt, prioritize semantic HTML and keyboard navigability.
 
 ## Overview
 

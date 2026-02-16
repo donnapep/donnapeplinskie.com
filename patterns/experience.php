@@ -20,8 +20,8 @@
 	<div class="wp-block-group timeline animate-on-scroll">
 		<!-- wp:group {"className":"timeline-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 		<div class="wp-block-group timeline-item">
-			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan"} -->
-			<p class="timeline-date has-cyan-color has-text-color">2025 — PRESENT</p>
+			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan-dark"} -->
+			<p class="timeline-date has-cyan-dark-color has-text-color">2025 — PRESENT</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"className":"timeline-content","layout":{"type":"constrained"}} -->
@@ -60,8 +60,8 @@
 
 		<!-- wp:group {"className":"timeline-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 		<div class="wp-block-group timeline-item">
-			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan"} -->
-			<p class="timeline-date has-cyan-color has-text-color">2021 — 2024</p>
+			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan-dark"} -->
+			<p class="timeline-date has-cyan-dark-color has-text-color">2021 — 2024</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"className":"timeline-content","layout":{"type":"constrained"}} -->
@@ -100,8 +100,8 @@
 
 		<!-- wp:group {"className":"timeline-item","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 		<div class="wp-block-group timeline-item">
-			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan"} -->
-			<p class="timeline-date has-cyan-color has-text-color">2017 — 2021</p>
+			<!-- wp:paragraph {"className":"timeline-date","textColor":"cyan-dark"} -->
+			<p class="timeline-date has-cyan-dark-color has-text-color">2017 — 2021</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"className":"timeline-content","layout":{"type":"constrained"}} -->

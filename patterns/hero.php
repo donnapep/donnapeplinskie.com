@@ -6,12 +6,12 @@
  * Description: Minimal hero section with bold typography
  */
 ?>
-<!-- wp:group {"align":"full","className":"hero-section","style":{"spacing":{"padding":{"top":"clamp(120px, 20vh, 200px)","bottom":"clamp(120px, 20vh, 200px)"}}},"backgroundColor":"cream","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull hero-section has-cream-background-color has-background" style="padding-top:clamp(120px, 20vh, 200px);padding-bottom:clamp(120px, 20vh, 200px)">
+<!-- wp:group {"align":"full","className":"hero-section","style":{"spacing":{"padding":{"top":"clamp(120px, 20vh, 200px)","bottom":"clamp(80px, 15vh, 160px)"}}},"backgroundColor":"cream","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull hero-section has-cream-background-color has-background" style="padding-top:clamp(120px, 20vh, 200px);padding-bottom:clamp(80px, 15vh, 160px)">
 	<!-- wp:group {"className":"hero-content","layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group hero-content">
-		<!-- wp:paragraph {"align":"center","className":"hero-greeting","style":{"typography":{"fontSize":"18px","fontWeight":"500","letterSpacing":"0.1em"}},"textColor":"cyan"} -->
-		<p class="has-text-align-center hero-greeting has-cyan-color has-text-color" style="font-size:18px;font-weight:500;letter-spacing:0.1em">HELLO, I'M</p>
+		<!-- wp:paragraph {"align":"center","className":"hero-greeting","style":{"typography":{"fontSize":"18px","fontWeight":"500","letterSpacing":"0.1em"}},"textColor":"cyan-dark"} -->
+		<p class="has-text-align-center hero-greeting has-cyan-dark-color has-text-color" style="font-size:18px;font-weight:500;letter-spacing:0.1em">HELLO, I'M</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"textAlign":"center","level":1,"className":"hero-name","style":{"typography":{"fontSize":"clamp(48px, 10vw, 96px)","fontWeight":"400","lineHeight":"1.1","letterSpacing":"-0.03em"},"spacing":{"margin":{"top":"20px","bottom":"30px"}}},"textColor":"dark-gray"} -->
@@ -23,20 +23,9 @@
 		<!-- /wp:separator -->
 
 		<!-- wp:paragraph {"align":"center","className":"hero-tagline","style":{"typography":{"fontSize":"clamp(18px, 2.5vw, 24px)","lineHeight":"1.6"}},"textColor":"gray"} -->
-		<p class="has-text-align-center hero-tagline has-gray-color has-text-color" style="font-size:clamp(18px, 2.5vw, 24px);line-height:1.6">Special Projects Engineer at <strong>Automattic</strong><br>Showcasing the best of WordPress, one project at a time</p>
+		<p class="has-text-align-center hero-tagline has-gray-color has-text-color" style="font-size:clamp(18px, 2.5vw, 24px);line-height:1.6">Engineer + Product Thinker</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"40px"}}}} -->
-		<div class="wp-block-buttons" style="margin-top:40px">
-			<!-- wp:button {"backgroundColor":"cyan","style":{"border":{"radius":"2px"}}} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-cyan-background-color has-background wp-element-button" href="#about" style="border-radius:2px">Learn More</a></div>
-			<!-- /wp:button -->
-
-			<!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"2px"}}} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#contact" style="border-radius:2px">Get in Touch</a></div>
-			<!-- /wp:button -->
-		</div>
-		<!-- /wp:buttons -->
 	</div>
 	<!-- /wp:group -->
 </div>

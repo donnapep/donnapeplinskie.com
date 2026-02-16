@@ -18,18 +18,16 @@
 
 	<!-- wp:query {"queryId":2,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"className":"animate-on-scroll"} -->
 	<div class="wp-block-query animate-on-scroll">
-		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
-			<!-- wp:group {"className":"post-card","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"20px","left":"0"}},"border":{"radius":"2px"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group post-card has-white-background-color has-background" style="border-radius:2px;padding-top:0;padding-right:0;padding-bottom:20px;padding-left:0">
-				<!-- wp:post-featured-image {"isLink":true,"style":{"spacing":{"margin":{"bottom":"0"}}}} /-->
+		<!-- wp:post-template {"className":"blog-list","layout":{"type":"default"}} -->
+			<!-- wp:group {"className":"blog-list-item","style":{"spacing":{"padding":{"top":"20px","bottom":"20px"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+			<div class="wp-block-group blog-list-item" style="padding-top:20px;padding-bottom:20px">
+				<!-- wp:post-date {"textColor":"gray","fontSize":"small","style":{"layout":{"selfStretch":"fixed","flexSize":"120px"}}} /-->
 
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"20px","right":"30px","bottom":"0","left":"30px"}}}} -->
-				<div class="wp-block-group" style="padding-top:20px;padding-right:30px;padding-bottom:0;padding-left:30px">
-					<!-- wp:post-date {"textColor":"cyan","fontSize":"small"} /-->
+				<!-- wp:group {"style":{"layout":{"selfStretch":"fill","flexSize":""}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group">
+					<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"0","bottom":"8px"}}},"fontSize":"medium"} /-->
 
-					<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"top":"10px"}}},"fontSize":"large"} /-->
-
-					<!-- wp:post-excerpt {"excerptLength":20,"style":{"spacing":{"margin":{"top":"10px"}}}} /-->
+					<!-- wp:post-excerpt {"excerptLength":20,"style":{"spacing":{"margin":{"top":"0"}}}} /-->
 				</div>
 				<!-- /wp:group -->
 			</div>

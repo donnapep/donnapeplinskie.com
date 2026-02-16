@@ -49,6 +49,11 @@ body {
 	transition: color 0.2s ease;
 }
 
+.wp-block-navigation .wp-block-navigation-item a:hover {
+	color: var(--wp--preset--color--orange) !important;
+}
+
+
 /* Button base styles */
 .wp-block-button__link {
 	padding: 12px 24px;
@@ -119,7 +124,7 @@ body {
 }
 
 .wp-block-query-pagination-numbers .page-numbers.current {
-	background: var(--wp--preset--color--cyan);
+	background: var(--wp--preset--color--cyan-dark);
 	color: var(--wp--preset--color--white);
 }
 
@@ -164,12 +169,13 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-	outline: none;
-	border-bottom-color: var(--wp--preset--color--cyan);
+	border-bottom-color: var(--wp--preset--color--cyan-dark);
+	outline: 2px solid var(--wp--preset--color--cyan-dark);
+	outline-offset: 2px;
 }
 
 input[type="submit"] {
-	background: var(--wp--preset--color--cyan);
+	background: var(--wp--preset--color--cyan-dark);
 	color: var(--wp--preset--color--white);
 	border: none;
 	padding: 12px 24px;
@@ -201,7 +207,7 @@ input[type="submit"]:hover {
 .wp-block-post-excerpt__more-link {
 	display: inline-block;
 	padding: 8px 16px;
-	background: var(--wp--preset--color--cyan);
+	background: var(--wp--preset--color--cyan-dark);
 	color: var(--wp--preset--color--white) !important;
 	border-radius: 2px;
 	font-weight: 500;
@@ -282,22 +288,11 @@ input[type="submit"]:hover {
 	font-size: 14px;
 }
 
-/* Personal info in about section */
-.personal-info p {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	padding: 10px 0;
-	margin: 0;
-}
-
-.personal-info p:last-child {
-	border-bottom: none;
-}
-
-/* About section headings with white accent on cyan */
+/* About section headings with dark accent on cyan */
 .about-section h2 {
 	font-style: normal;
 	padding-left: 15px;
-	border-left: 4px solid var(--wp--preset--color--white);
+	border-left: 4px solid var(--wp--preset--color--dark-gray);
 	display: inline-block;
 }
 
@@ -331,18 +326,18 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Warm Shadow System
-	 ============================================ */
+   Warm Shadow System
+   ============================================ */
 :root {
 	--shadow-color: 30 20% 20%;
 	--shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.06),
-							 0 1px 3px hsl(var(--shadow-color) / 0.1);
+	             0 1px 3px hsl(var(--shadow-color) / 0.1);
 	--shadow-md: 0 4px 6px hsl(var(--shadow-color) / 0.07),
-							 0 2px 4px hsl(var(--shadow-color) / 0.06);
+	             0 2px 4px hsl(var(--shadow-color) / 0.06);
 	--shadow-lg: 0 10px 15px hsl(var(--shadow-color) / 0.1),
-							 0 4px 6px hsl(var(--shadow-color) / 0.05);
+	             0 4px 6px hsl(var(--shadow-color) / 0.05);
 	--shadow-xl: 0 20px 25px hsl(var(--shadow-color) / 0.1),
-							 0 8px 10px hsl(var(--shadow-color) / 0.04);
+	             0 8px 10px hsl(var(--shadow-color) / 0.04);
 }
 
 /* Update card shadows to use warm system */
@@ -391,8 +386,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Scroll Animations
-	 ============================================ */
+   Scroll Animations
+   ============================================ */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -472,10 +467,15 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Link Underline Animation
-	 ============================================ */
+   Link Underline Animation
+   ============================================ */
 .wp-block-group p a:not(.wp-block-button__link) {
 	position: relative;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.wp-block-group p a:not(.wp-block-button__link):hover {
 	text-decoration: none;
 }
 
@@ -495,8 +495,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Hero Section Enhancements
-	 ============================================ */
+   Hero Section Enhancements
+   ============================================ */
 .hero-section .hero-content {
 	animation: fadeIn 0.8s ease-out;
 }
@@ -530,18 +530,18 @@ input[type="submit"]:hover {
 /* Outline button style for hero */
 .hero-section .is-style-outline .wp-block-button__link {
 	background: transparent;
-	border: 2px solid var(--wp--preset--color--cyan);
-	color: var(--wp--preset--color--cyan);
+	border: 2px solid var(--wp--preset--color--cyan-dark);
+	color: var(--wp--preset--color--cyan-dark);
 }
 
 .hero-section .is-style-outline .wp-block-button__link:hover {
-	background: var(--wp--preset--color--cyan);
+	background: var(--wp--preset--color--cyan-dark);
 	color: var(--wp--preset--color--white);
 }
 
 /* ============================================
-	 About Section Enhancements
-	 ============================================ */
+   About Section Enhancements
+   ============================================ */
 .about-section .profile-image {
 	display: inline-block;
 }
@@ -556,29 +556,18 @@ input[type="submit"]:hover {
 
 /* Links in about section on cyan background */
 .about-section a:not(.wp-block-button__link) {
-	color: var(--wp--preset--color--white) !important;
+	color: var(--wp--preset--color--dark-gray) !important;
 	text-decoration: underline;
 }
 
 .about-section a:not(.wp-block-button__link):hover {
-	opacity: 0.8;
-}
-
-/* Social icons in about section - white with subtle background */
-.about-section .wp-block-social-links .wp-social-link {
-	background: rgba(255, 255, 255, 0.15) !important;
-	border-radius: 50%;
-	padding: 8px;
-	transition: background 0.2s ease;
-}
-
-.about-section .wp-block-social-links .wp-social-link:hover {
-	background: rgba(255, 255, 255, 0.3) !important;
+	color: var(--wp--preset--color--orange) !important;
+	text-decoration: none;
 }
 
 /* ============================================
-	 Skills Section Enhancements
-	 ============================================ */
+   Skills Section Enhancements
+   ============================================ */
 /* Vertical dividers between columns */
 .skills-section .skills-columns {
 	position: relative;
@@ -595,8 +584,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Experience Section Timeline
-	 ============================================ */
+   Experience Section Timeline
+   ============================================ */
 .timeline-item {
 	padding: 30px 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -659,8 +648,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Projects Section Enhancements
-	 ============================================ */
+   Projects Section Enhancements
+   ============================================ */
 /* Constrain project images to consistent aspect ratio */
 .projects-section .post-card > figure.wp-block-image {
 	overflow: hidden;
@@ -691,8 +680,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Blog Section Enhancements
-	 ============================================ */
+   Blog Section Enhancements
+   ============================================ */
 /* Equalize blog card heights in grid */
 .blog-section .wp-block-post-template {
 	align-items: stretch;
@@ -752,8 +741,8 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Contact Section Enhancements
-	 ============================================ */
+   Contact Section Enhancements
+   ============================================ */
 .contact-section {
 	background: linear-gradient(
 		135deg,
@@ -773,7 +762,7 @@ input[type="submit"]:hover {
 
 /* Make contact social icons use consistent styling */
 .contact-section .post-card .wp-block-social-links .wp-social-link {
-	background: var(--wp--preset--color--cyan) !important;
+	background: var(--wp--preset--color--cyan-dark) !important;
 }
 
 .contact-section .post-card .wp-block-social-links .wp-social-link svg {
@@ -793,15 +782,44 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Projects Section Refinements
-	 ============================================ */
+   Projects Section Refinements
+   ============================================ */
 .projects-section .post-card h3 {
 	font-style: normal;
 }
 
 /* ============================================
-	 Blog Section Refinements
-	 ============================================ */
+   Blog List Layout
+   ============================================ */
+.blog-list-item {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.blog-list > li:last-child .blog-list-item {
+	border-bottom: none;
+}
+
+.blog-list-item .wp-block-post-date {
+	flex-shrink: 0;
+	padding-top: 4px;
+}
+
+.blog-list-item .wp-block-post-excerpt {
+	margin-top: 0;
+}
+
+.blog-list-item .wp-block-post-excerpt__excerpt {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.blog-list-item .wp-block-post-excerpt__more-link {
+	display: none;
+}
+
+/* ============================================
+   Blog Section Refinements
+   ============================================ */
 .blog-section .wp-block-post-title {
 	font-style: normal;
 }
@@ -842,16 +860,16 @@ input[type="submit"]:hover {
 }
 
 /* ============================================
-	 Global Heading Style Fix
-	 ============================================ */
+   Global Heading Style Fix
+   ============================================ */
 h1, h2, h3, h4, h5, h6,
 .wp-block-heading {
 	font-style: normal;
 }
 
 /* ============================================
-	 Global Card Text Alignment
-	 ============================================ */
+   Global Card Text Alignment
+   ============================================ */
 /* Ensure consistent first element margin in all cards */
 .post-card > p:first-child,
 .post-card > .wp-block-group > p:first-child,
@@ -871,8 +889,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ============================================
-	 Footer Refinements
-	 ============================================ */
+   Footer Refinements
+   ============================================ */
 footer.wp-block-template-part {
 	margin-top: 0 !important;
 }
@@ -884,4 +902,56 @@ footer .wp-block-social-links .wp-social-link:hover {
 
 footer .wp-block-social-links .wp-social-link {
 	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* ============================================
+   Focus Visible States
+   ============================================ */
+a:focus-visible,
+.wp-block-button__link:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.wp-block-navigation-item a:focus-visible,
+.wp-block-social-links .wp-social-link a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--cyan-dark);
+	outline-offset: 2px;
+}
+
+/* Buttons and nav items: remove default outline, use custom */
+.wp-block-button__link:focus-visible {
+	box-shadow: none;
+}
+
+/* ============================================
+   Skip Navigation
+   ============================================ */
+.skip-link {
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--wp--preset--color--cyan-dark);
+	color: var(--wp--preset--color--white);
+	padding: 12px 24px;
+	z-index: 1000;
+	border-radius: 0 0 2px 2px;
+	font-weight: 500;
+	text-decoration: none;
+	transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 2px solid var(--wp--preset--color--cyan-dark);
+	outline-offset: 2px;
+}
+
+/* Navigation links should not show underline */
+.wp-block-navigation a {
+	text-decoration: none !important;
+}
+
+/* Buttons should not show underline */
+.wp-block-button__link {
+	text-decoration: none !important;
 }
