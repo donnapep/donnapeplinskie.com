@@ -22,7 +22,7 @@ $profile_image = esc_url( get_template_directory_uri() ) . '/assets/images/profi
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"textColor":"dark-gray"} -->
-			<p class="has-dark-gray-color has-text-color">Before that, I led an engineering team working on <a href="https://senseilms.com">Sensei LMS</a>, a learning management system plugin for WordPress, where I learned that building the right thing matters more than building more things. I talk to users and analyze the data to figure out what that right thing is, and then I use AI to build it.</p>
+			<p class="has-dark-gray-color has-text-color">Before that, I led an engineering team working on <a href="https://senseilms.com">Sensei LMS</a>, a learning management system plugin for WordPress, where I learned that building the right thing matters more than building more things. I talk to users and analyze product data to figure out what that right thing is, and then I use AI to build it.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
