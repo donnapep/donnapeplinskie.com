@@ -40,7 +40,7 @@ $sensei_image = esc_url( get_template_directory_uri() ) . '/assets/images/sensei
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"15px"}}}} -->
-					<p style="margin-bottom:15px">Migrated the company's flagship site from a legacy classic theme to a modern block theme. Converted 30+ templates while maintaining zero downtime.</p>
+					<p style="margin-bottom:15px">Migrated the company's flagship site from a legacy classic theme to a modern block theme. Converted 30+ templates while maintaining zero downtime. Built with an AI-augmented workflow using Cursor AI and Claude Code, including custom Claude skills for automated browser testing.</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"gray","fontSize":"small"} -->

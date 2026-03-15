@@ -51,6 +51,14 @@
 					<!-- wp:paragraph {"className":"timeline-tag"} -->
 					<p class="timeline-tag">Block Themes</p>
 					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"className":"timeline-tag"} -->
+					<p class="timeline-tag">Claude Code</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"className":"timeline-tag"} -->
+					<p class="timeline-tag">AI Tooling</p>
+					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 			</div>

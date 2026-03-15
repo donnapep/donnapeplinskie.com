@@ -49,7 +49,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"gray"} -->
-			<p class="has-text-align-center has-gray-color has-text-color">Shipping faster by using AI to think through problems, implement designs, and write code.</p>
+			<p class="has-text-align-center has-gray-color has-text-color">Using AI for coding, and setting up codebase-aware workflows like custom Claude skills and automated code reviews.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
