@@ -638,7 +638,7 @@ input[type="submit"]:hover {
 	border: 1px solid var(--wp--preset--color--cyan);
 	border-radius: 25px;
 	font-size: 14px !important;
-	color: var(--wp--preset--color--cyan) !important;
+	color: var(--wp--preset--color--orange) !important;
 	transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -848,16 +848,18 @@ input[type="submit"]:hover {
    Blog List Layout
    ============================================ */
 .blog-list-item {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	border-left: 3px solid var(--wp--preset--color--cyan);
+	padding-left: 20px;
+	transition: border-left-color 0.2s ease, background 0.2s ease;
 }
 
-.blog-list > li:last-child .blog-list-item {
-	border-bottom: none;
+.blog-list-item:hover {
+	border-left-color: var(--wp--preset--color--orange);
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .blog-list-item .wp-block-post-date {
 	flex-shrink: 0;
-	padding-top: 4px;
 }
 
 .blog-list-item .wp-block-post-excerpt {
@@ -871,6 +873,22 @@ input[type="submit"]:hover {
 
 .blog-list-item .wp-block-post-excerpt__more-link {
 	display: none;
+}
+
+.blog-list-item .wp-block-post-terms a {
+	display: inline-block;
+	padding: 4px 12px;
+	border: 1px solid var(--wp--preset--color--cyan);
+	border-radius: 25px;
+	font-size: 12px !important;
+	text-decoration: none;
+	margin-right: 6px;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.blog-list-item .wp-block-post-terms a:hover {
+	background: var(--wp--preset--color--cyan);
+	color: var(--wp--preset--color--white) !important;
 }
 
 /* ============================================
