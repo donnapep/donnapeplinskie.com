@@ -21,6 +21,7 @@ This is a WordPress block theme. Key decisions that deviate from what you might 
 ## Commands
 
 - **Preview:** Visit `donnapeplinskie.test` in a browser (runs on Laravel Valet).
+- **Deploy:** Run `./deploy.sh`.
 
 ## Common pitfalls
 
