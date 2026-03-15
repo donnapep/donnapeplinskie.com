@@ -116,6 +116,10 @@ body {
 	gap: 10px;
 }
 
+.wp-block-query-pagination a {
+	text-decoration: none;
+}
+
 .wp-block-query-pagination-numbers .page-numbers {
 	padding: 8px 12px;
 	background: var(--wp--preset--color--white);
@@ -211,6 +215,7 @@ input[type="submit"]:hover {
 	color: var(--wp--preset--color--white) !important;
 	border-radius: 2px;
 	font-weight: 500;
+	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 12px;
 	letter-spacing: 0.5px;
@@ -305,7 +310,8 @@ input[type="submit"]:hover {
 .skills-section > .wp-block-heading,
 .experience-section > .wp-block-heading,
 .projects-section > .wp-block-heading,
-.blog-section > .wp-block-heading {
+.blog-section > .wp-block-heading,
+.blog-archive-header > .wp-block-heading {
 	position: relative;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
@@ -314,7 +320,8 @@ input[type="submit"]:hover {
 .skills-section > .wp-block-heading::after,
 .experience-section > .wp-block-heading::after,
 .projects-section > .wp-block-heading::after,
-.blog-section > .wp-block-heading::after {
+.blog-section > .wp-block-heading::after,
+.blog-archive-header > .wp-block-heading::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -469,17 +476,17 @@ input[type="submit"]:hover {
 /* ============================================
    Link Underline Animation
    ============================================ */
-.wp-block-group p a:not(.wp-block-button__link) {
+.wp-block-group p a:not(.wp-block-button__link):not(.wp-block-post-excerpt__more-link) {
 	position: relative;
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
 
-.wp-block-group p a:not(.wp-block-button__link):hover {
+.wp-block-group p a:not(.wp-block-button__link):not(.wp-block-post-excerpt__more-link):hover {
 	text-decoration: none;
 }
 
-.wp-block-group p a:not(.wp-block-button__link)::after {
+.wp-block-group p a:not(.wp-block-button__link):not(.wp-block-post-excerpt__more-link)::after {
 	content: '';
 	position: absolute;
 	bottom: -2px;
@@ -490,7 +497,7 @@ input[type="submit"]:hover {
 	transition: width 0.3s ease;
 }
 
-.wp-block-group p a:not(.wp-block-button__link):hover::after {
+.wp-block-group p a:not(.wp-block-button__link):not(.wp-block-post-excerpt__more-link):hover::after {
 	width: 100%;
 }
 
@@ -581,6 +588,11 @@ input[type="submit"]:hover {
 /* Underline accent cyan on dark-gray background */
 .skills-section > .wp-block-heading::after {
 	background: var(--wp--preset--color--cyan);
+}
+
+/* Heading underline accent on cyan backgrounds */
+.blog-archive-header > .wp-block-heading::after {
+	background: var(--wp--preset--color--dark-gray);
 }
 
 /* ============================================
@@ -729,7 +741,8 @@ input[type="submit"]:hover {
 	margin: 0 !important;
 }
 
-.blog-section .post-card:hover .wp-block-post-featured-image img {
+.blog-section .post-card:hover .wp-block-post-featured-image img,
+.blog-archive .post-card:hover .wp-block-post-featured-image img {
 	transform: scale(1.05);
 }
 
@@ -738,6 +751,49 @@ input[type="submit"]:hover {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+}
+
+/* ============================================
+   Blog Archive Masonry Layout
+   ============================================ */
+.blog-archive .wp-block-post-template {
+	column-count: 3;
+	column-gap: 1.5rem;
+	list-style: none;
+	padding: 0;
+}
+
+.blog-archive .wp-block-post-template > li {
+	break-inside: avoid;
+	margin-bottom: 1.5rem;
+}
+
+.blog-archive .post-card .wp-block-post-featured-image {
+	overflow: hidden;
+	margin: 0 !important;
+	border-radius: 2px 2px 0 0;
+}
+
+.blog-archive .post-card .wp-block-post-featured-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	object-position: top;
+	transition: transform 0.4s ease;
+	margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+	.blog-archive .wp-block-post-template {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 600px) {
+	.blog-archive .wp-block-post-template {
+		column-count: 1;
+	}
 }
 
 /* ============================================
@@ -820,7 +876,8 @@ input[type="submit"]:hover {
 /* ============================================
    Blog Section Refinements
    ============================================ */
-.blog-section .wp-block-post-title {
+.blog-section .wp-block-post-title,
+.blog-archive .wp-block-post-title {
 	font-style: normal;
 }
 
@@ -836,7 +893,8 @@ input[type="submit"]:hover {
 }
 
 /* Hide empty featured image block on cards without images */
-.blog-section .post-card:not(:has(.wp-block-post-featured-image img)) .wp-block-post-featured-image {
+.blog-section .post-card:not(:has(.wp-block-post-featured-image img)) .wp-block-post-featured-image,
+.blog-archive .post-card:not(:has(.wp-block-post-featured-image img)) .wp-block-post-featured-image {
 	display: none;
 }
 
@@ -884,8 +942,32 @@ h1, h2, h3, h4, h5, h6,
 	margin-bottom: 0.75em;
 }
 
+/* Remove margins from paragraphs inside flex rows (e.g. dot separators) */
+.post-card .is-layout-flex p {
+	margin: 0;
+}
+
 .post-card p:last-child {
 	margin-bottom: 0;
+}
+
+/* ============================================
+   Single Post Header
+   ============================================ */
+/* Post title link in banner should match heading color */
+.single-post-header .wp-block-post-title a {
+	color: var(--wp--preset--color--dark-gray) !important;
+	text-decoration: none !important;
+}
+
+/* Metadata links in banner */
+.single-post-header .wp-block-post-terms a {
+	color: var(--wp--preset--color--dark-gray) !important;
+	text-decoration: none;
+}
+
+.single-post-header .wp-block-post-author {
+	color: var(--wp--preset--color--dark-gray);
 }
 
 /* ============================================
